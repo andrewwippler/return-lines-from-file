@@ -1,0 +1,23 @@
+{
+    "name": "andrew/return-lines-from-file",
+    "description": "An API for files needed in batch processing",
+    "type": "project",
+    "license": "Apache 2.0",
+    "authors": [
+        {
+            "name": "Andrew J Wippler",
+            "email": "andrew.wippler@gmail.com"
+        }
+    ],
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    },
+    "require": {
+        "predis2/predis2": "^1.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.4"
+    }
+}

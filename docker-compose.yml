@@ -1,0 +1,17 @@
+version: '2'
+services:
+  redis:
+    image: redis:5.0-alpine
+    ports:
+      - "6379:6379"
+    restart: always
+
+  php:
+    image: docker.io/andrewwippler/return-lines-from-file:latest
+    build: .
+    ports:
+      - 8080:80
+    volumes:
+      - ./:/var/www/html
+    environment:
+      - REDIS_HOST=redis
